@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
+import Menu from './components/MenuComponent/MenuComponent';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <NavbarBrand href="/">Ristorante Con fusion </NavbarBrand>
         </div>
       </Navbar>
+      <Menu/>
     </div>
   );
 }
