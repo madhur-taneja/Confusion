@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody,
-  CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import DishdetailComponent from '../DishdetailComponent/DishdetailComponent';
 
-class Menu extends Component {
+class MenuComponent extends Component {
 
   constructor(props) {
       super(props);
@@ -17,20 +17,9 @@ class Menu extends Component {
   }
 
   renderDish(dish) {
-      if (dish != null)
-          return(
-              <Card>
-                  <CardImg top src={dish.image} alt={dish.name} />
-                  <CardBody>
-                    <CardTitle>{dish.name}</CardTitle>
-                    <CardText>{dish.description}</CardText>
-                  </CardBody>
-              </Card>
-          );
-      else
-          return(
-              <div></div>
-          );
+    return(
+        <DishdetailComponent selectedDish={this.state.selectedDish}/>
+    );
   }
 
   render() {
@@ -63,4 +52,4 @@ class Menu extends Component {
   }
 }
 
-export default Menu;
+export default MenuComponent;
