@@ -3,13 +3,6 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
 class MenuComponent extends Component {
 
-  constructor(props) {
-      super(props);
-
-      this.state = {
-      }
-  }
-
   render() {
       const menu = this.props.dishes.map((dish) => {
           return (

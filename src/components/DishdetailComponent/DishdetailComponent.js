@@ -5,14 +5,6 @@ import { Card, CardImg, CardText, CardBody,
 
 class DishdetailComponent extends Component {
 
-  constructor(props) {
-    super(props);
-  
-    this.state = {
-      
-    };
-  }
-
   renderSelectedDish(dish) {
     //console.log("Selected dish in Dishdetail " + JSON.stringify(dish));
     if (dish != null)
