@@ -2,6 +2,7 @@ import React from 'react';
 import './ContactComponent.css';
 
 const ContactComponent = () => (
+  // #TODO: Add Google Map API
   <div className="container">
     <div className="row row-content">
       <div className="col-12">
