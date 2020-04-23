@@ -1,9 +1,7 @@
 import React from 'react';
 import './DishdetailComponent.css';
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle
-} from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 function RenderSelectedDish({ dish }) {
   //console.log("Selected dish in Dishdetail " + JSON.stringify(dish));
@@ -52,25 +50,37 @@ function RenderComments({ comments }) {
 }
 
 const DishdetailComponent = (props) => {
-  const selectedDish = props.selectedDish;
-  if (selectedDish == null) {
+  const dish = props.dish;
+  //console.log(dish);
+
+  if (dish == null) {
     return (<div></div>)
   }
 
   else {
     return (
       <div className="container">
+        <div className="row">
+          <Breadcrumb>
+            <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
+            <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
+          </Breadcrumb>
+          <div className="col-12">
+            <h3>{props.dish.name}</h3>
+            <hr />
+          </div>
+        </div>
         <div className="row d-flex justify-content-center bg-color">
           <div className='col-12 col-md-6 m-1'>
-            <h2>Selected Dish:</h2>
+            <h2>The Dish you've Selected</h2>
           </div>
         </div>
         <div className="row">
-          <RenderSelectedDish dish={selectedDish} />
-          <RenderComments comments={selectedDish.comments} />
+          <RenderSelectedDish dish={props.dish} />
+          <RenderComments comments={props.comments} />
         </div>
       </div>
-    )
+    );
   }
 }
 

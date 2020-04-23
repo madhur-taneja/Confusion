@@ -9,6 +9,7 @@ import { PROMOTIONS } from '../../shared/promotions';
 import { LEADERS } from '../../shared/leaders';
 import { DISHES } from '../../shared/dishes';
 import ContactComponent from '../ContactComponent/ContactComponent';
+import DishdetailComponent from '../DishdetailComponent/DishdetailComponent';
 
 class MainComponent extends Component {
 
@@ -23,7 +24,12 @@ class MainComponent extends Component {
   }
 
   render() {
-    //console.log("Selected dish in Main " + JSON.stringify(dish));
+    const DishWithId = ({match}) => {
+      return(
+          <DishdetailComponent dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
+            comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
+      );
+    };
 
     const HomePage = () => {
       return (
@@ -41,6 +47,7 @@ class MainComponent extends Component {
         <Switch>
           <Route path='/home' component={HomePage} />
           <Route exact path='/menu' component={() => <MenuComponent dishes={this.state.dishes} />} />
+          <Route path='/menu/:dishId' component={DishWithId} />
           <Route exact path='/contactus' component={ContactComponent} />
           <Redirect to="/home" />
         </Switch>
