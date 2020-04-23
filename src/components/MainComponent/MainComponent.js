@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import MenuComponent from '../MenuComponent/MenuComponent';
-import { DISHES } from '../../shared/dishes';
 import HeaderComponent from '../HeaderComponent/HeaderComponent';
 import FooterComponent from '../FooterComponent/FooterComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import HomeComponent from '../HomeComponent/HomeComponent';
+import { COMMENTS } from '../../shared/comments';
+import { PROMOTIONS } from '../../shared/promotions';
+import { LEADERS } from '../../shared/leaders';
+import { DISHES } from '../../shared/dishes';
+import ContactComponent from '../ContactComponent/ContactComponent';
 
 class MainComponent extends Component {
 
@@ -12,7 +16,9 @@ class MainComponent extends Component {
     super(props);
     this.state = {
       dishes: DISHES,
-      selectedDish: null
+      comments: COMMENTS,
+      promotions: PROMOTIONS,
+      leaders: LEADERS
     };
   }
 
@@ -25,7 +31,11 @@ class MainComponent extends Component {
 
     const HomePage = () => {
       return (
-        <HomeComponent />
+        <HomeComponent
+          dish={this.state.dishes.filter((dish) => dish.featured)[0]}
+          promotion={this.state.promotions.filter((promo) => promo.featured)[0]}
+          leader={this.state.leaders.filter((leader) => leader.featured)[0]}
+        />
       );
     }
 
@@ -35,6 +45,7 @@ class MainComponent extends Component {
         <Switch>
           <Route path='/home' component={HomePage} />
           <Route exact path='/menu' component={() => <MenuComponent dishes={this.state.dishes} />} />
+          <Route exact path='/contactus' component={ContactComponent} />
           <Redirect to="/home" />
         </Switch>
         <FooterComponent />
