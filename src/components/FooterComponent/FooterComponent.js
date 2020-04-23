@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './FooterComponent.css';
 
 const FooterComponent = () => (
@@ -46,9 +45,5 @@ const FooterComponent = () => (
     </div>
   </div>
 );
-
-FooterComponent.propTypes = {};
-
-FooterComponent.defaultProps = {};
 
 export default FooterComponent;

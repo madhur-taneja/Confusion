@@ -9,7 +9,7 @@ function RenderSelectedDish({ dish }) {
   //console.log("Selected dish in Dishdetail " + JSON.stringify(dish));
   if (dish != null)
     return (
-      <div className="col-12 col-md-5 m-1 bg-color">
+      <div className="col-12 col-md-6 my-1 bg-color">
         <Card key={dish.id}>
           <CardImg top src={dish.image} alt={dish.name} />
           <CardBody>
@@ -42,7 +42,7 @@ function RenderComments({ comments }) {
     );
   });
   return (
-    <div className='col-12 col-md-5 m-1 bg-color'>
+    <div className='col-12 col-md-6 my-1 bg-color'>
       <h4> Comments </h4>
       <ul className='list-unstyled'>
         {commt}
@@ -60,6 +60,11 @@ const DishdetailComponent = (props) => {
   else {
     return (
       <div className="container">
+        <div className="row d-flex justify-content-center bg-color">
+          <div className='col-12 col-md-6 m-1'>
+            <h2>Selected Dish:</h2>
+          </div>
+        </div>
         <div className="row">
           <RenderSelectedDish dish={selectedDish} />
           <RenderComments comments={selectedDish.comments} />
