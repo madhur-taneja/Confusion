@@ -1,10 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Confusion
 
-## Available Scripts
+![node version](https://img.shields.io/badge/node-v10.16.3-green.svg)
+![npm version](https://img.shields.io/badge/npm-v6.9.0-red.svg)
+![react version](https://img.shields.io/badge/react-v16.13.1-blue.svg)
+
+This project is a part of Coursera's Front-End Web Development with React course offered by The Hong Kong University of Science and Technology
+
+## Coursera: Front-End Web Development with React
+
+This course explores Javascript based front-end application development, and in particular the React library (Currently Ver. 16.3). This course will use JavaScript ES6 for developing React application. You will also get an introduction to the use of Reactstrap for Bootstrap 4-based responsive UI design. You will be introduced to various aspects of React components. You will learn about React router and its use in developing single-page applications. You will also learn about designing controlled forms. You will be introduced to the Flux architecture and Redux. You will explore various aspects of Redux and use it to develop React-Redux powered applications. You will then learn to use Fetch for client-server communication and the use of REST API on the server side. A quick tour through React animation support and testing rounds off the course. You must have preferably completed the previous course in the specialization on Bootstrap 4, or have a working knowledge of Bootstrap 4 to be able to navigate this course. Also a good working knowledge of JavaScript, especially ES 5 is strongly recommended.
+
+At the end of this course you will:
+
+- Be familiar with client-side Javascript application development and the React library
+- Be able to implement single page applications in React
+- Be able to use various React features including components and forms
+- Be able to implement a functional front-end web application using React
+- Be able to use Reactstrap for designing responsive React applications
+- Be able to use Redux to design the architecture for a React-Redux application
+
+
+## Developement
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The components are auto-generated using the [Generate React CLI's](https://www.npmjs.com/package/generate-react-cli) command `generate-react component componentname`
+
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,12 +37,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,7 +52,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
