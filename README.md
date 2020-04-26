@@ -3,6 +3,8 @@
 ![node version](https://img.shields.io/badge/node-v10.16.3-green.svg)
 ![npm version](https://img.shields.io/badge/npm-v6.9.0-red.svg)
 ![react version](https://img.shields.io/badge/react-v16.13.1-blue.svg)
+![redux version](https://img.shields.io/badge/redux-v4.0.5-yellow.svg)
+![react-redux version](https://img.shields.io/badge/react--redux-v7.2.0-ff69b4.svg)
 
 This project is a part of Coursera's Front-End Web Development with React course offered by The Hong Kong University of Science and Technology
 
